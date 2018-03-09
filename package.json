@@ -1,0 +1,33 @@
+{
+  "name": "teacher.portal",
+  "version": "1.0.0",
+  "description": "Teacher's official portal page",
+  "productName": "Teacher Portal",
+  "cordovaId": "com.systemexperts.sis.teacher",
+  "author": "thavorac <thavorac.chun@gmail.com>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "vue-i18n": "^7.3.3"
+  },
+  "devDependencies": {
+    "devtron": "1.4.0",
+    "electron": "1.7.9",
+    "electron-debug": "1.4.0",
+    "electron-devtools-installer": "2.2.1",
+    "electron-packager": "9.1.0",
+    "quasar-cli": "^0.15.1"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
+}

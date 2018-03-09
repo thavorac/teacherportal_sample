@@ -1,0 +1,21 @@
+<svg width="375px" height="240px" viewBox="0 0 375 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FAFFF2" offset="0%"></stop>
+            <stop stop-color="#A8E490" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="All-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.410097948">
+        <g id="01-Splash-Screen" transform="translate(0.000000, -427.000000)" fill="url(#linearGradient-1)">
+            <g id="pattern" transform="translate(0.000000, 427.000000)">
+                <path d="M3.55667308e-13,160.244054 C153.127088,-12.1244425 282.564111,-45.4352117 388.311068,60.3117459 L387.262321,241 L0,241 L3.55667308e-13,160.244054 Z" transform="translate(194.155534, 120.500000) scale(-1, 1) translate(-194.155534, -120.500000) "></path>
+                <path d="M170.5,82 C218.697006,82 261.72424,110.611652 299.5817,167.834957 C308.801238,181.770716 321.940671,206.492397 339,242 L2,242 C48.5299902,135.333333 104.696657,82 170.5,82 Z"></path>
+                <path d="M377,1 L377,242 L122,242 C192.416306,81.3333333 277.416306,1 377,1 Z"></path>
+                <path d="M1.5,64 C55.1316837,64 103.010652,95.4728176 145.136906,158.418453 C155.396036,173.747787 170.017067,200.941636 189,240 L1,240 L1.5,64 Z"></path>
+                <path d="M1,124.712157 C189,242 189,46.8430662 377,90.4889317 L377,242 L1,242 L1,124.712157 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>
