@@ -2,7 +2,10 @@
     <q-page padding>
         <div class="fixed-center app-title" align="center">
             <h2 class="">Teacher Portal</h2>
-            <span>Loading ... </span>
+            <q-inner-loading :visible="preparing">
+                <q-spinner-puff size="50px" color="teal-4" />
+                <span class="text-faded q-mt-lg">We are preparing everything. Please wait ...</span>
+            </q-inner-loading>
         </div>
 
         <div class="window-width fixed-bottom">
@@ -17,6 +20,18 @@
 <script>
     export default {
         name: 'SplashScreen',
+        data () {
+            return {
+                preparing: true
+            }
+        },
+        methods: {
+        },
+        mounted() {
+            setTimeout(() => {
+                this.$router.push("/introduction")
+            }, 3000)
+        }
     }
 </script>
 

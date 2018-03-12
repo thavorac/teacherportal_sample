@@ -4,7 +4,9 @@ module.exports = function (ctx) {
     return {
         plugins: [
             'i18n',
-            'axios'
+            'axios',
+            'firebase',
+            'vuelidate'
         ],
         css: [
             'app.styl'
@@ -33,8 +35,8 @@ module.exports = function (ctx) {
         },
         devServer: {
             // https: true,
-            // port: 8080,
-            open: true // opens browser window automatically
+            port: 5000,
+            open: false // opens browser window automatically
         },
         // framework: 'all' --- includes everything; for dev only!
         framework: {
@@ -68,7 +70,17 @@ module.exports = function (ctx) {
                 'QToggle',
                 'QSelect',
                 'QSlider',
-                'QRange'
+                'QRange',
+                'QAlert',
+                'QInnerLoading',
+                'QSpinnerHourglass',
+                'QSpinnerBall',
+                'QSpinnerPuff',
+                'QTree',
+                'QChip',
+                'QTable',
+                'QTableColumns',
+                'QSearch'
             ],
             directives: [
                 'Ripple',

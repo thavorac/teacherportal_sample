@@ -21,7 +21,7 @@
                             <q-item
                                     :key="`a-1`"
                                     v-close-overlay
-                                    @click.native="notify">
+                                    @click.native="view_profile">
                                 <q-item-main label="Profile" sublabel="Application Profile" />
                             </q-item>
                             <q-item
@@ -33,7 +33,7 @@
                             <q-item
                                     :key="`a-3`"
                                     v-close-overlay
-                                    @click.native="notify">
+                                    @click.native="logout">
                                 <q-item-main label="Logout"/>
                             </q-item>
                         </q-list>
@@ -41,28 +41,22 @@
                 </q-btn>
             </q-toolbar>
         </q-layout-header>
-
-        <!-- (Optional) The Footer -->
         <q-layout-footer>
-            <!--<q-tabs>-->
-                <!--<q-route-tab-->
-                        <!--slot="title"-->
-                        <!--icon="map"-->
-                        <!--to="/your/route"-->
-                        <!--replace-->
-                        <!--label="One Tab"-->
-                <!--/>-->
-                <!--<q-route-tab-->
-                        <!--slot="title"-->
-                        <!--icon="assignment"-->
-                        <!--to="/some/other/route"-->
-                        <!--replace-->
-                        <!--label="Other Tab"-->
-                <!--/>-->
-            <!--</q-tabs>-->
+            <q-tabs>
+                <q-route-tab
+                        slot="title"
+                        icon="map"
+                        to="/your/route"
+                        replace
+                />
+                <q-route-tab
+                        slot="title"
+                        icon="assignment"
+                        to="/some/other/route"
+                        replace
+                />
+            </q-tabs>
         </q-layout-footer>
-
-        <!-- (Optional) A Drawer; you can add one more with side="right" or change this one's side -->
         <q-layout-drawer
                 side="left"
                 v-model="leftDrawer"
@@ -73,14 +67,17 @@
         >
             <q-scroll-area class="fit q-pa-sm">
                 <q-list-header>Thavorac</q-list-header>
-                <q-item to="/showcase/layout-demo/play-with-layout">
-                    <q-item-side icon="account circle" />
-                    <q-item-main label="Play with Layout" sublabel="Learn more about it" />
-                    <q-item-side right icon="thumb_up" />
+                <q-item to="/activity/course/tree">
+                    <q-item-side icon="library books" />
+                    <q-item-main label="My Courses" label-lines="1" sublabel="Courses you are teaching" sublabel-lines="1"/>
                 </q-item>
-                <q-item to="/showcase/layout-demo/drawer-panels">
-                    <q-item-side icon="view_array" />
-                    <q-item-main label="Drawer Panels" sublabel="Layout left/right sides" />
+                <q-item to="/activity/schedule/list">
+                    <q-item-side icon="today" />
+                    <q-item-main label="Schedule" label-lines="1" sublabel="Today schedule" sublabel-lines="1"/>
+                </q-item>
+                <q-item to="/activity/student/list">
+                    <q-item-side icon="face" />
+                    <q-item-main label="Students" label-lines="1" sublabel="Students attend my class " sublabel-lines="1" />
                 </q-item>
             </q-scroll-area>
         </q-layout-drawer>
@@ -102,6 +99,17 @@
                 leftBehavior:"mobile",
                 leftBreakpoint:20
             }
+        },
+        methods: {
+             view_profile() {
+                 this.$router.push("/activity/profile")
+             },
+             logout() {
+                 this.$auth.signOut().then( () => {
+                     this.$store.commit("user/setUser",null)
+                     this.$router.replace("/login")
+                 })
+             }
         }
     }
 </script>
